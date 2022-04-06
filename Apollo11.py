@@ -19,10 +19,10 @@ class Apollo11(IStrategy):
     # Assited by a number of contributors https://github.com/shanejones/goddard/graphs/contributors
     #
     # Original repo hosted at https://github.com/shanejones/goddard
-    timeframe = "15m"
+    timeframe = "5m"
 
     # Stoploss
-    stoploss = -0.16
+    stoploss = -0.069
     startup_candle_count: int = 480
     trailing_stop = False
     use_custom_stoploss = True
@@ -35,30 +35,30 @@ class Apollo11(IStrategy):
 
     # ROI table:
     minimal_roi = {
-        "0": 10,  # This is 10000%, which basically disables ROI
+        "0": 1,  # This is 1000%, which basically disables ROI
     }
 
     # Indicator values:
 
     # Signal 1
     s1_ema_xs = 3
-    s1_ema_sm = 5
-    s1_ema_md = 10
-    s1_ema_xl = 50
-    s1_ema_xxl = 240
+    s1_ema_sm = 6
+    s1_ema_md = 9
+    s1_ema_xl = 44
+    s1_ema_xxl = 220
 
     # Signal 2
-    s2_ema_input = 50
+    s2_ema_input = 52
     s2_ema_offset_input = -1
 
-    s2_bb_sma_length = 49
+    s2_bb_sma_length = 48
     s2_bb_std_dev_length = 64
     s2_bb_lower_offset = 3
 
-    s2_fib_sma_len = 50
-    s2_fib_atr_len = 14
+    s2_fib_sma_len = 49
+    s2_fib_atr_len = 16
 
-    s2_fib_lower_value = 4.236
+    s2_fib_lower_value = 4.369
 
     @property
     def protections(self):
